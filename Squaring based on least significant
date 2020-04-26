@@ -1,0 +1,52 @@
+/*
+
+Write a program to calculate the square of only the numbers  whose least significant digit is 5.
+
+Input format :
+Input consists of an integer.
+
+Output format :
+Output consists of the square of a number or a message if the number's least significant is not 5.
+Refer sample input and output for formatting specifications. 
+[ All text in bold corresponds to input and the rest corresponds to output.]
+
+
+Sample Input and Output 1 :
+Enter the number :
+125
+The square of 125 is 15625
+
+Sample Input and Output 2 :
+Enter the number :
+521
+Least significant of 521 is not 5
+
+
+Problem Requirements:
+C
+Keyword	Min Count	Max Count
+else	1	-
+Keyword	Min Count	Max Count
+if	1	-
+*/
+
+
+#include<stdio.h>
+int main()
+{
+	int n,l;
+	printf("Enter the number :\n");
+	scanf("%d",&n);
+	l=n%10;
+	if(l==5)
+	{
+	    printf("The square of %d is %d",n,n*n);
+	}
+	else
+	{
+	    printf("Least significant of %d is not 5",n);
+	}
+	
+	
+	return 0;
+}
