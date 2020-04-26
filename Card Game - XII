@@ -1,0 +1,51 @@
+/*
+
+Patrick started to play a card game –XII. In this game, he has to choose three cards, based on the card number present in the third card he will be a winner. With the help of Johnny, he inferred a pattern in the third card number was the Least Common Multiple of first and second card numbers.
+So write a C program to help Patrick to choose a third card to make him win this game using while loop.
+
+Input Format:
+Input consists of 2 integers, which corresponds to the first and second card respectively.
+Output Format:
+Output consists of a single line. Refer sample output for details.
+ 
+[All text in bold corresponds to input and the rest corresponds to output]
+
+Sample Input and Output1:
+Enter the first card picked up by Patrick:
+15
+Enter the second card picked up by Patrick:
+9
+Patrick must choose next card with the number 45
+
+
+Problem Requirements:
+C
+Keyword	Min Count	Max Count
+while ....	1	1
+
+*/
+
+
+
+#include<stdio.h>
+int main()
+{
+	int a,b;
+	printf("Enter the first card picked up by Patrick:\n");
+	scanf("%d",&a);
+	
+	printf("Enter the second card picked up by Patrick:\n");
+	scanf("%d",&b);
+	int max=(a>b)?a:b;
+	while(1)
+	{
+	    if((max%a==0)&&(max%b==0))
+	    {
+	        printf("Patrick must choose next card with the number %d",max);
+	        break;
+	    }
+	    max++;
+	}
+	
+	return 0;
+}
