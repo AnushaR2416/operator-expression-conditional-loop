@@ -1,0 +1,75 @@
+/*
+
+A number is said to be valid if it is divisible by 8.
+
+Write a program that allows the user to keep entering numbers as long as the input is valid and also displays a count of the valid numbers entered using a while loop and continue statement.
+
+
+Input Format:
+
+Input consists of integers.
+
+
+Output Format:
+
+Refer Sample Input and Output for formatting specifications.
+
+ 
+
+[All text in bold corresponds to input and the rest corresponds to output]
+
+Sample Input and Output:
+
+Enter the number
+
+8
+
+Enter the number
+
+16
+
+Enter the number
+
+96
+
+Enter the number
+
+6
+
+The number of valid numbers entered is 3
+
+
+Problem Requirements:
+C
+Keyword	Min Count	Max Count
+for	0	0
+Keyword	Min Count	Max Count
+while ....	1	1
+Keyword	Min Count	Max Count
+continue	1	1
+
+*/
+
+#include<stdio.h>
+int main()
+{
+	int n,count=0;
+	while(1)
+	{
+	    printf("Enter the number\n");
+	    scanf("%d",&n);
+	    if(n%8!=0)
+	    {
+	        printf("The number of valid numbers entered is %d",count);
+	        break;
+	    }
+	    else
+	    {
+	        count++;
+	        continue;
+	    }
+	}
+	
+	
+	return 0;
+}
