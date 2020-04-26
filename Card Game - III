@@ -1,0 +1,61 @@
+/*
+Disneyland offers a credit card to all the players playing this card game. This credit card is credited with points based on this card game - III. Patrick started to play a card game - III. In this game, he has to pick the cards which are shuffled on the table until he picks the card with the number -999. Once he picks the card with number -999, Patrick must handover all the cards picked to Disneyland card game manager. The sum of all numbers in the card is credited as points to Patrick.
+The players can pick any number of cards until the card with number -999 is encountered. So it is difficult for the Disneyland managers to sum up all card numbers. They approach you and ask for your help.
+Can you please help them with the program to sum all numbers in the card (exclude -999 when calculating the sum) using for loop?
+
+Input Format:
+Input consists of a list of integers.
+
+Output Format:
+Output consists of a single line. Refer sample output for details.
+
+[All text in bold corresponds to input and the rest corresponds to output]
+
+Sample Input and Output 1:
+Enter the cards picked up by Patrick:
+3
+4
+5
+-2
+-999
+The credit points is 10
+
+Sample Input and Output 2:
+Enter the cards picked up by Patrick:
+4
+4
+-999
+The credit points is 8
+
+ 
+
+
+Problem Requirements:
+C
+Keyword	Min Count	Max Count
+for	1	1
+
+*/
+
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    int n,sum=0;
+    printf("Enter the cards picked up by Patrick:\n");
+	for(;;)
+	{
+	    scanf("%d",&n);
+	    if(n==-999)
+	    {
+	        break;
+	    }
+	    sum=sum+n;
+	}
+	
+	printf("The credit points is %d",sum);
+	return 0;
+}
